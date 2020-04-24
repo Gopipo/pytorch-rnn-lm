@@ -10,12 +10,12 @@ samples=$base/samples
 
 mkdir -p $samples
 
-num_threads=4
+num_threads=8
 device=""
 
 (cd $tools/pytorch-examples/word_language_model &&
     CUDA_VISIBLE_DEVICES=$device OMP_NUM_THREADS=$num_threads python generate.py \
-        --data $data/trump \
+        --data $data/cookbook \
         --words 100 \
         --checkpoint $models/model.pt \
         --outf $samples/sample
