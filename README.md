@@ -2,6 +2,59 @@
 
 This repo shows how to train neural language models using [Pytorch example code](https://github.com/pytorch/examples/tree/master/word_language_model).
 
+Original repo at https://github.com/bricksdont/pytorch-rnn-lm
+
+# Changes made:
+
+- ./scripts/download_data.sh  >  ./scripts/download_data_cookbook.sh
+- ammended ./scripts/train.sh to fit new names
+- ammended ./scripts/generate.sh to fit new names
+- added new rules to preprocessed_raw.py (lines 8-13)
+
+Results at 5000 vocabulary size, 0.5 dropout:
+
+|emsize| test ppl
+-----------------
+| 150  | 163.00 |
+-----------------
+| 200  | 161.75 |
+-----------------
+| 225  | 163.96 |
+-----------------
+| 230  | 155.71 |
+-----------------
+| **240**  | **153.23** |
+-----------------
+| 250  | 153.96 |
+-----------------
+| 260  | 156.40 |
+-----------------
+| 275  | 157.26 |
+-----------------
+| 300  | 154.48 |
+-----------------
+| 320  | 173.87 |
+-----------------
+| 350  | 156.64 |
+-----------------
+| 375  | 160.92 |
+-----------------
+| 400  | 158.42 |
+-----------------
+| 450  | 158.69 |
+-----------------
+| 500  | 160.23 |
+-----------------
+
+# Sample:
+ 
+. <eos> Large length of GLACÉ ° . Canned with <eos> egg PICKLES without crystals while them only out to
+make sometimes , <eos> leave them <unk> wrap as expose all paper . <eos> Individual creams may be served in
+<unk> . <eos> 6 rind is of Sift like noyau depends than highly <eos> If a Brown citron or so
+way so tartar from a CANNING luncheons very sprinkled <eos> to be brine stronger from them or best , which
+can be <eos> put in butter ; <eos> in three or a few paper , but it has no gathered
+
+
 # Requirements
 
 - This only works on a Unix-like system, with bash.
@@ -14,7 +67,7 @@ This repo shows how to train neural language models using [Pytorch example code]
 
 Clone this repository in the desired place:
 
-    git clone https://github.com/bricksdont/pytorch-rnn-lm
+    git clone https://github.com/Gopipo/pytorch-rnn-lm
     cd pytorch-rnn-lm
 
 Create a new virtualenv that uses Python 3. Please make sure to run this command outside of any virtual Python environment:
@@ -29,7 +82,7 @@ Download and install required software:
 
 Download and preprocess data:
 
-    ./scripts/download_data.sh
+    ./scripts/download_data_cookbook.sh
 
 Train a model:
 
