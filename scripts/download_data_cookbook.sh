@@ -24,24 +24,24 @@ mkdir -p $data/cookbook
 
 mkdir -p $data/cookbook/raw
 
-wget http://www.gutenberg.org/cache/epub/22790/pg22790.txt
-mv pg22790.txt $data/cookbook/raw
+wget http://www.gutenberg.org/cache/epub/34822/pg34822.txt
+mv pg34822.txt $data/cookbook/raw
 
 #remove head and tail
 
-sed -n '37, 18718p' $data/cookbook/raw/pg22790.txt > $data/cookbook/raw/pg22790.cut.txt
+sed -n '45, 23557p' $data/cookbook/raw/pg34822.txt > $data/cookbook/raw/pg34822.cut.txt
 
 # preprocess slightly
 
-cat $data/cookbook/raw/pg22790.cut.txt | python $base/scripts/preprocess_raw.py > $data/cookbook/raw/pg22790.cleaned.txt
+cat $data/cookbook/raw/pg34822.cut.txt | python $base/scripts/preprocess_raw.py > $data/cookbook/raw/pg34822.cleaned.txt
 
 # tokenize, fix vocabulary upper bound
 
-cat $data/cookbook/raw/pg22790.cleaned.txt | python $base/scripts/preprocess.py --vocab-size 4000 --tokenize --lang "en" > \
-    $data/cookbook/raw/pg22790.preprocessed.txt
+cat $data/cookbook/raw/pg34822.cleaned.txt | python $base/scripts/preprocess.py --vocab-size 5000 --tokenize --lang "en" > \
+    $data/cookbook/raw/pg34822.preprocessed.txt
 
 # split into train, valid and test
 
-head -n 500 $data/cookbook/raw/pg22790.preprocessed.txt > $data/cookbook/valid.txt
-head -n 1000 $data/cookbook/raw/pg22790.preprocessed.txt | tail -n 500 > $data/cookbook/test.txt
-tail -n 3260 $data/cookbook/raw/pg22790.preprocessed.txt > $data/cookbook/train.txt
+head -n 500 $data/cookbook/raw/pg34822.preprocessed.txt > $data/cookbook/valid.txt
+head -n 1000 $data/cookbook/raw/pg34822.preprocessed.txt | tail -n 500 > $data/cookbook/test.txt
+tail -n 3260 $data/cookbook/raw/pg34822.preprocessed.txt > $data/cookbook/train.txt

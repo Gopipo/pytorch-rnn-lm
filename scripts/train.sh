@@ -16,8 +16,8 @@ SECONDS=0
 
 (cd $tools/pytorch-examples/word_language_model &&
     CUDA_VISIBLE_DEVICES=$device OMP_NUM_THREADS=$num_threads python main.py --data $data/cookbook \
-        --model LSTM --epochs 30 \
-        --emsize 175 --nhid 175 --dropout 0.5 --tied \
+        --epochs 20 \
+        --emsize 240 --nhid 240 --dropout 0.5 --tied \
         --save $models/model.pt
 )
 
