@@ -11,6 +11,11 @@ Original repo at https://github.com/bricksdont/pytorch-rnn-lm
 - ammended ./scripts/generate.sh to fit new names
 - added new rules to preprocessed_raw.py (lines 8-13)
 
+Dropout of 0.5 was optimal
+Changing vocabulary size to 4000 would generate lower test ppl (240 | 144.88);
+when examining the sample output,however, it was less coherent.
+Changing it to 6000 would massively increase the test ppl to 240 | >244
+
 Results at 5000 vocabulary size, 0.5 dropout:
 
 |emsize| test ppl
