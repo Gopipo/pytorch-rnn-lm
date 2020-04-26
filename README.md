@@ -47,11 +47,12 @@ Results at 5000 vocabulary size, 0.5 dropout:
 
 # Sample:
  
-. <eos> Large length of GLACÉ ° . Canned with <eos> egg PICKLES without crystals while them only out to
-make sometimes , <eos> leave them <unk> wrap as expose all paper . <eos> Individual creams may be served in
-<unk> . <eos> 6 rind is of Sift like noyau depends than highly <eos> If a Brown citron or so
-way so tartar from a CANNING luncheons very sprinkled <eos> to be brine stronger from them or best , which
-can be <eos> put in butter ; <eos> in three or a few paper , but it has no gathered
+. <eos> No. 4 . Press one half peck of different fruit apples ( adding chopped <unk> Do <eos> is
+dry ° , and leave them in a angel course or stirring as desired or <eos> browned . Do not
+place in a slack oven less <eos> browned . Drop a liquor &apos;s <unk> if place add a cupful of
+<eos> cream into a saucepan until dice ; flavored in the center or West <eos> too soft . <eos> =
+CAFÉ ICE-CREAM = <eos> Take to ten and the éclairs of the center , the iron it on the mold
+
 
 
 # Requirements
